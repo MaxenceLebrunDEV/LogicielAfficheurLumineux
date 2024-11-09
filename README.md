@@ -1,6 +1,6 @@
 # Logiciel d'Afficheur Lumineux
 
-Bienvenue dans le projet **Logiciel d'Afficheur Lumineux**, une application développée en **Node.js** et **Electron** permettant de contrôler des panneaux lumineux LED via une interface graphique simple et intuitive.
+Bienvenue dans le projet **Logiciel d'Afficheur Lumineux**, une application développée en **Node.js** et **Electron** permettant de contrôler des panneaux lumineux LED/ des écrans externes via une interface graphique simple et intuitive.
 
 ## 🚀 Fonctionnalités
 
@@ -20,7 +20,7 @@ Bienvenue dans le projet **Logiciel d'Afficheur Lumineux**, une application dév
 
 
    ```bash
-   git clone https://github.com/votre-utilisateur/afficheur-lumineux.git
+   https://github.com/MaxenceLebrunDEV/LogicielAfficheurLumineux.git
    cd afficheur-lumineux
    npm install
 ```
