@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P'tit Prix</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: black;
+    }
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <video id="videoPlayer" autoplay loop></video>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+
+    ipcRenderer.on('load-video', (event, videoPath) => {
+      const videoPlayer = document.getElementById('videoPlayer');
+      console.log('Chargement de la vidéo depuis : ', videoPath);
+      
+      // Utiliser directement l'URL de la vidéo, sans 'file://'
+      videoPlayer.src = videoPath;
+
+      // Charger et jouer la vidéo
+      videoPlayer.load();
+      videoPlayer.play();
+
+      // En cas d'erreur, afficher dans la console
+      videoPlayer.onerror = function () {
+        console.error('Erreur lors du chargement de la vidéo', videoPlayer.error);
+      };
+    });
+  </script>
+</body>
+</html>
